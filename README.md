@@ -24,6 +24,41 @@ check the version of the host with docker --version and install the appropriate 
 
 #### Setting up Jenkins 
 
+We need to 2 pre-req activities before we create our pipeline 
+1. Install docker plugin 
+2. Add docker credentials
+ 
+##### Install docker plugin 
+1. Click on manage Jenkins from Jenkins homepage 
+    ![jenkins-home](images/jenkins-manage.png)
+
+2. Click on manage plugins, search for docker and install "docker" plugin
+    ![jenkins-home](images/jenkins-manage-plugin.png)
+
+##### Add docker credentials
+1. From Jenkins homepage click on credentials 
+    ![jenkins-home](images/jenkins-home.png)
+
+2. From credentials click on "Add credentials"
+    ![jenkins-home](images/jenkins-add-cred.png)
+
+3. Fill the information. In the screenshot below i am adding credentials for my personal github. 
+   Take a note of what you add as the "ID" as you will be referencing it in the Jenkinsfile.
+
+    ![jenkins-home](images/jenkins-add-cred-docker.png)
+
+#### Creating Jenkins pipeline 
+1. From Jenkins homepage click on add "new-item" which will take you to the page where you can create a pipeline. 
+    Give a name and select pipeline option and click ok.
+    ![jenkins-home](images/jenkins-create-pipeline.png)
+
+2. Click on the advanced project options and from SCM select the repo where you have stored your Jenkinsfile and click save.
+    ![jenkins-home](images/jenkins-pipeline.png )
+
+3. Fom the pipeline you created click on "Build Now" to start your pipeline build 
+    ![jenkins-home](images/jenkins-build-now.png)
+
+
 ### Troubleshooting
 
 1. If you get the below error, it might be a plugin mismatch. Go to manage jenkins, scroll down and click on manage 

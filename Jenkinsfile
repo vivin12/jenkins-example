@@ -10,7 +10,7 @@ pipeline {
   stages {
       stage('Cloning Git') {
         steps {
-            git 'https://github.com/vivin12/test-app'
+            git 'https://github.com/vivin12/test-app' //Replace with SVN repository
         }
     }
 
