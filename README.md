@@ -35,7 +35,7 @@ We need to 2 pre-req activities before we create our pipeline
 
 2. Click on manage plugins, search for docker and install "docker" plugin
     
-    <img src="images/jenkins-manage-plugin.png" width="200">
+    <img src="images/jenkins-manage-plugin.png" width="400">
 
 ##### Add docker credentials
 1. From Jenkins homepage click on credentials 
@@ -44,27 +44,27 @@ We need to 2 pre-req activities before we create our pipeline
 
 2. From credentials click on "Add credentials"
    
-    <img src="images/jenkins-add-cred.png" width="200">
+    <img src="images/jenkins-add-cred.png" width="400">
 
 3. Fill the information. In the screenshot below i am adding credentials for my personal github. 
    Take a note of what you add as the "ID" as you will be referencing it in the Jenkinsfile.
 
-    <img src="images/jenkins-add-cred-docker.png" width="200">
+    <img src="images/jenkins-add-cred-docker.png" width="400">
     
 
 #### Creating Jenkins pipeline 
 1. From Jenkins homepage click on add "new-item" which will take you to the page where you can create a pipeline. 
     Give a name and select pipeline option and click ok.
     
-    <img src="images/jenkins-create-pipeline.png" width="200">
+    <img src="images/jenkins-create-pipeline.png" width="400">
 
 2. Click on the advanced project options and from SCM select the repo where you have stored your Jenkinsfile and click save.
 
-   <img src="images/jenkins-pipeline.png" width="200">
+   <img src="images/jenkins-pipeline.png" width="400">
 
 3. Fom the pipeline you created click on "Build Now" to start your pipeline build 
     
-   <img src="images/jenkins-create-pipeline.png" width="200">
+   <img src="images/jenkins-build-now.png" width="400">
 
 
 ### Troubleshooting
