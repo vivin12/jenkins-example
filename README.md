@@ -49,7 +49,7 @@ We need to 2 pre-req activities before we create our pipeline
 3. Fill the information. In the screenshot below i am adding credentials for my personal github. 
    Take a note of what you add as the "ID" as you will be referencing it in the Jenkinsfile.
 
-    <img src="images/jenkins-add-cred-docker.png" width="400">
+    <img src="images/jenkins-add-cred-docker.png" width="600">
     
 
 #### Creating Jenkins pipeline 
