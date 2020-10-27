@@ -1,8 +1,8 @@
 pipeline {
 
   environment {
-    imageStream = "gooner4life/jenkins-test" //replace with OCP image stream name
-    registryCredential = 'dockerhub'         //replace with OCP credential you have added in jenkins
+    imageStream = "default-route-openshift-image-registry/va/jenkins-test"
+    registryCredential = 'ocp-registry'
     dockerImage = ''
   }
 
@@ -25,7 +25,7 @@ pipeline {
     stage('Deploy Image') {
       steps {
         script {
-          docker.withRegistry( '', registryCredential ) {   //update the first field with registry url if you are not pushing to dockerhub
+          docker.withRegistry( 'http://default-route-openshift-image-registry/va/jenkins-test', registryCredential ) {
             dockerImage.push()
           }
         }
