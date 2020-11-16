@@ -1,0 +1,10 @@
+---
+- hosts : all 
+  become : true  //Become root 
+
+  tasks:
+  - name: build docker image 
+    command: docker build -t simple-devops-image .
+    args:
+      chdir: /liberty   //Point to directory with dockerfile 
+
