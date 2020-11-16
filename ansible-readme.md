@@ -10,5 +10,7 @@
 
 ### Ansible on Jenkins 
 
-1. Once you have integrated Ansible server on Jenkins you can will see an option in post build actions. 
+1. Got to manage Jenkins -> configure system -> configure over ssh. This is to enable jenkins to ssh into ansible system. Provide the ip, username and password of Ansible system. 
+
+2. Once you have integrated Ansible server on Jenkins you will see an option in post build actions to send files over ssh. You can drop your war file to ansible server and in exec command section you can provide ansible run command ```ansible-playbook -i hosts simple-devops-image.yml```. 
   
