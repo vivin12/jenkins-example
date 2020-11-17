@@ -1,0 +1,15 @@
+---
+- hosts : all
+  become : true  
+
+  tasks:
+  - name: build docker image
+    command: docker build -t vision-image .
+    args:
+      chdir: /liberty   //Point to directory with dockerfile
+  
+  - name: tag image
+    command: docker tag vision-image ocp.registry/dev/vision-image
+
+  - name: push image to OCP
+    command: docker push vision-image ocp.registry/dev/vision-image

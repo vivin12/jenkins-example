@@ -1,0 +1,10 @@
+---
+- hosts : OCP 
+  become : true  
+
+  tasks:
+  - name: create deployment 
+    command: oc apply -f vision-deployment.yaml
+
+  - name: create service 
+    command: oc apply -f vision-service.yaml
